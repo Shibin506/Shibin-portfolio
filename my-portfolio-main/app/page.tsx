@@ -175,7 +175,7 @@ export default function Home() {
                 className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="/Ph 1 (2).jpg"
+                  src="/profile.jpg"
                   alt="Shibin Biji Thomas"
                   fill
                   className="object-cover object-[50%_18%]" /* Focus near the top to keep the face visible */
@@ -190,3 +190,4 @@ export default function Home() {
     </main>
   );
 }
+
