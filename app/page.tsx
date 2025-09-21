@@ -107,7 +107,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Experienced Software Engineer at Accenture with expertise in AWS cloud solutions, database optimization, and automation. Specialized in implementing scalable database solutions, CI/CD pipelines, and real-time monitoring systems. Achieved significant performance improvements through data validation, query optimization, and automated workflows.
+              Detail-oriented software engineer pursuing an MS in Applied Data Intelligence at San Jose State University. Formerly at Accenture, focused on backend and cloud-native systems (AWS), designing high-concurrency microservices, scalable databases, CI/CD pipelines, and real-time monitoring to drive reliability and performance.
             </motion.p>
 
             {/* Social Links */}
@@ -178,7 +178,7 @@ export default function Home() {
                   src="/profile.jpg"
                   alt="Shibin Biji Thomas"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 288px, 384px"
                   priority
                 />
