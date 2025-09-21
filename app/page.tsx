@@ -175,7 +175,7 @@ export default function Home() {
                 className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="/my-new-profile.jpg"
+                  src="/profile.jpg"
                   alt="Shibin Biji Thomas"
                   fill
                   className="object-cover"
