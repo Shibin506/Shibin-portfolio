@@ -91,18 +91,18 @@ export default function ContactPage() {
 
   const socialLinks = [
     {
-      href: "mailto:sarvesh.waghmare101@gmail.com",
+      href: "mailto:shibinbiji2@gmail.com",
       icon: FaEnvelope,
       label: "Email",
     },
     {
-      href: "https://www.linkedin.com/in/sarvesh-waghmare-8a631a16b/",
+      href: "https://www.linkedin.com/in/shibin-biji-593228183/",
       icon: FaLinkedin,
       label: "LinkedIn",
       isExternal: true
     },
     {
-      href: "https://github.com/sarvesh172000",
+      href: "https://github.com/Shibin506",
       icon: FaGithub,
       label: "GitHub",
       isExternal: true

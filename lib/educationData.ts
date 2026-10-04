@@ -12,19 +12,17 @@ export interface Education {
 export const educationData: Education[] = [
   {
     institution: "San Jose State University",
-    degree: "Masters in Applied Data Science",
+    degree: "Master of Science in Applied Data Intelligence",
     location: "San Jose, CA",
     startDateText: "January 2025",
-    endDateText: "Present",
-    grade: "In Progress",
+    endDateText: "May 2027 (Expected)",
+    grade: "3.5 GPA",
     coursework: [
-      "Data Science Fundamentals",
-      "Machine Learning",
-      "Statistical Analysis",
-      "Big Data Processing",
-      "Data Visualization",
-      "Database Systems"
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "Distributed Systems",
+      "Object-Oriented Design"
     ],
     logo: "/sjsu-logo.svg"
   }
-]; 
+];

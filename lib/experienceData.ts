@@ -10,31 +10,35 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    company: "Accenture Pvt Ltd",
-    role: "Software Engineer",
-    location: "India",
-    startDateText: "March 2023",
-    endDateText: "December 2024",
-    description: `• Achieved 98% data accuracy by implementing custom validation logic and test automation, ensuring compliance and consistency across datasets from multiple sources.
+    company: "LinkedIn",
+    role: "AI/ML Intern",
+    location: "Sunnyvale, CA, USA",
+    startDateText: "May 2026",
+    endDateText: "August 2026",
+    description: `• Architected and benchmarked novel Multi-Task Learning (MTL) heads (MMoE v3, 2-Level PLE, Grouped/Capped CGC, DCNv2) for a 12-objective feed ranking model, systematically resolving gradient conflict and capacity contention across sparse and high-frequency engagement signals.
 
-• Designed and implemented scalable database solutions on AWS (EC2) utilizing advanced SQL partitioning and index optimization techniques, resulting in 40% improved query performance and 25% cost reduction
+• Delivered top-tier ranking quality gains, achieving 11/12 AUC wins (up to +0.20% Click, +0.34% Save, +1.00% Message) and 11/12 Normalized Entropy (NE) improvements (up to -0.87% Vote NE, -0.82% Message NE).
 
-• Automated data collection and processing workflows using Python scripts, reducing manual work by 40% and increasing productivity
+• Designed and deployed a Hybrid Static-Head + Hashed-Tail embedding layer for ultra-high cardinality features (hashedActorId, 201.5M entities across 79.5B training impressions), eliminating severe hash collision interference across 16.78M embedding rows.
 
-• Integrated Elasticsearch and Kibana to build real-time log monitoring dashboards, enabling faster root cause analysis and improving issue detection time by 30%`,
-    logo: "/accenture.webp"
+• Optimized multi-task gate routing by implementing a 20% capped private capacity constraint, gate dropout (0.15), and learnable softmax scales, preventing high-frequency signals (click, like) from monopolizing expert capacity.
+
+• Implemented distributed GPU state synchronization (All-Gather sync across PyTorch DDP ranks) for dynamic registry updates and evaluated LFU eviction policies, identifying key trade-offs between eviction strategies.`,
+    logo: "/linkedin.svg"
   },
   {
     company: "Accenture Pvt Ltd",
-    role: "Associate Software Engineer",
-    location: "India",
+    role: "Software Engineer",
+    location: "Pune, India",
     startDateText: "July 2021",
-    endDateText: "March 2023",
-    description: `• Implemented robust database transaction logic leveraging ACID principles and RBAC policies, ensuring data integrity and security compliance
+    endDateText: "December 2024",
+    description: `• Developed and deployed predictive machine learning models (Scikit-learn, PyTorch, Python) for customer classification and lifecycle churn prediction, leveraging complex SQL queries on large-scale relational datasets.
 
-• Collaborated with cross-functional teams to gather requirements and deliver insights that revamped process workflows and decreased costs by 15%
+• Conducted data mining, statistical analysis, and automated feature selection on multi-terabyte customer datasets, improving predictive model precision and recall by 18%.
 
-• Implemented CI/CD pipelines using Jenkins for an insurance analytics platform, reducing build and deployment time by 60% and enabling automated testing across multiple environments`,
+• Containerized ML scoring microservices using Docker and deployed scalable inference pipelines on AWS (ECS, S3) with continuous integration (CI/CD), ensuring 99.6% system uptime.
+
+• Designed unit and integration testing suites (PyTest, JUnit) for automated ML data validation and API endpoints, reducing production data pipeline defects by 24%.`,
     logo: "/accenture.webp"
   }
-]; 
+];

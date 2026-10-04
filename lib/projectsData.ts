@@ -2,11 +2,30 @@ export interface Project {
   title: string;
   description: string[];
   techStack: string[];
-  github: string;
-  demo: string;
+  github?: string;
+  demo?: string;
 }
 
 export const projectsData: Project[] = [
+  {
+    title: "AI-Driven Multi-Modal Personalization & Media Platform",
+    description: [
+      "Architected a multi-modal machine learning platform in Python (FastAPI, PyTorch), implementing deep learning feature extraction and media personalization algorithms on large-scale datasets.",
+      "Integrated vector similarity search using high-dimensional embeddings and Redis caching, reducing media search and retrieval latency to sub-80ms across 100,000+ asset catalog entries.",
+      "Applied statistical modeling and data mining methods in Scikit-learn to automate metadata tag extraction and customer engagement classification.",
+      "Containerized ML serving infrastructure with Docker and configured CI/CD pipelines on AWS (ECS, S3), utilizing asynchronous task queues (Celery) to guarantee 99.9% service uptime."
+    ],
+    techStack: ["Python", "PyTorch", "Scikit-learn", "FastAPI", "Redis", "Docker", "AWS (ECS, S3)", "Vector Search", "SQL"]
+  },
+  {
+    title: "Distributed Time Series Analytics & Event Processing Engine",
+    description: [
+      "Engineered a real-time telemetry processing engine in Java (Spring Boot) and C++, ingesting and aggregating 15,000+ time-series user activity events per second for predictive analytics.",
+      "Implemented advanced relational schema partitioning, indexing, and SQL optimization in PostgreSQL, decreasing query latency by 35% under high write volumes.",
+      "Developed statistical time-series forecasting scripts in Python to detect data drift and operational performance outliers across stream pipelines."
+    ],
+    techStack: ["Java", "Spring Boot", "C++", "Python", "SQL", "PostgreSQL"]
+  },
   {
     title: "GlobalGuide AI Travel Planner",
     description: [
