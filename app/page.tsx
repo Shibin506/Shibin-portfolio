@@ -11,7 +11,7 @@ export default function Home() {
   const firstName = "Shibin Biji".split("");
   const lastName = "Thomas".split("");
 
-  const roles = ["Software Engineer", "Data Engineer", "AI/ML Enthusiast"];
+  const roles = ["Software Engineer", "AI/ML Engineer", "Open to New Grad Roles"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -107,7 +107,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Detail-oriented software engineer pursuing an MS in Applied Data Intelligence at San Jose State University. Formerly at Accenture, focused on backend and cloud-native systems (AWS), designing high-concurrency microservices, scalable databases, CI/CD pipelines, and real-time monitoring to drive reliability and performance.
+              Software engineer graduating in May 2027 with an MS in Applied Data Intelligence from San Jose State University, seeking new grad software engineering and AI/ML roles. Most recently an AI/ML Intern at LinkedIn, building multi-task ranking models for a 12-objective feed. Previously spent 3+ years at Accenture shipping ML pipelines and containerized microservices on AWS. I enjoy the full SDLC, from design and testing to CI/CD and performance tuning, across Java, Python, C++ and TypeScript.
             </motion.p>
 
             {/* Social Links */}
