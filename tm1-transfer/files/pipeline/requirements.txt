@@ -1,0 +1,8 @@
+# Data pipeline dependencies [owner: Shibin]
+# Tested together on 2026-10-08 (also tested on pandas 3.0.5 / matplotlib 3.11.2 /
+# datasketch 2.0.0). Versions chosen to coexist with numpy==1.26.4 in the root
+# requirements.txt.
+pandas==2.2.3
+matplotlib==3.9.4
+datasketch==1.6.5
+# optional: pyarrow (only for --input *.parquet), datasets (only for --hf)
