@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Shibin Biji Thomas',
-  description: 'Software engineer (MS Applied Data Intelligence, SJSU, May 2027) and former LinkedIn AI/ML Intern, seeking new grad roles.',
+  description: 'Software engineer (MS Applied Data Intelligence, SJSU, Dec 2026) and former LinkedIn Software Engineer Intern, seeking new grad roles.',
 };
 
 export default function RootLayout({

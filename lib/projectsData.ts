@@ -8,23 +8,30 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: "AI-Driven Multi-Modal Personalization & Media Platform",
+    title: "Autonomous AI Agent & Serverless Workflow Engine",
     description: [
-      "Architected a multi-modal machine learning platform in Python (FastAPI, PyTorch), implementing deep learning feature extraction and media personalization algorithms on large-scale datasets.",
-      "Integrated vector similarity search using high-dimensional embeddings and Redis caching, reducing media search and retrieval latency to sub-80ms across 100,000+ asset catalog entries.",
-      "Applied statistical modeling and data mining methods in Scikit-learn to automate metadata tag extraction and customer engagement classification.",
-      "Containerized ML serving infrastructure with Docker and configured CI/CD pipelines on AWS (ECS, S3), utilizing asynchronous task queues (Celery) to guarantee 99.9% service uptime."
+      "Engineered an autonomous AI agent framework and serverless workflow engine in Go, Python, and Rust, utilizing custom RAG pipelines, LLMs, and Kafka to automate complex manual handoffs.",
+      "Designed custom concurrency handlers and event-driven streaming in Apache Flink, lowering real-time queuing latency from 150ms to 95ms across distributed deployments.",
+      "Deployed containerized microservice nodes on AWS EKS and Kubernetes with Docker, sustaining 99.5% node reliability in production environments."
     ],
-    techStack: ["Python", "PyTorch", "Scikit-learn", "FastAPI", "Redis", "Docker", "AWS (ECS, S3)", "Vector Search", "SQL"]
+    techStack: ["Go (Golang)", "Python", "Rust", "AWS Lambda", "RAG Pipelines", "Vector Databases", "Kafka", "Apache Flink", "Docker", "Kubernetes", "AWS EKS"]
   },
   {
-    title: "Distributed Time Series Analytics & Event Processing Engine",
+    title: "Scalable RAG Analytics & Client Integration Platform",
     description: [
-      "Engineered a real-time telemetry processing engine in Java (Spring Boot) and C++, ingesting and aggregating 15,000+ time-series user activity events per second for predictive analytics.",
-      "Implemented advanced relational schema partitioning, indexing, and SQL optimization in PostgreSQL, decreasing query latency by 35% under high write volumes.",
-      "Developed statistical time-series forecasting scripts in Python to detect data drift and operational performance outliers across stream pipelines."
+      "Developed a scalable analytics storage and client integration platform in Go, Java, and Python, automating schema validation, vector database indexing, and RAG data pipelines to PostgreSQL and AWS S3.",
+      "Orchestrated distributed ETL workflows with Apache Spark, Trino, and Airflow, applying data access optimizations that accelerated analytical query retrieval speed by 35%.",
+      "Built customer-facing web interfaces and integration endpoints using TypeScript, React.js, RESTful APIs, GraphQL, and gRPC, integrating real-time telemetry and feedback loops."
     ],
-    techStack: ["Java", "Spring Boot", "C++", "Python", "SQL", "PostgreSQL"]
+    techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
+  },
+  {
+    title: "Open Source Contributor: rocketride-server (17.8k Stars)",
+    description: [
+      "Contributed core runtime and execution optimizations to a multithreaded C++17/Python engine executing AI workflows across 130+ Python nodes, 15+ LLM providers, and databases.",
+      "Implemented exact-once delivery semantics for payload queues and integrated Model Context Protocol (MCP) in production environments."
+    ],
+    techStack: ["C++17", "Python", "Model Context Protocol (MCP)", "LLM Providers", "Multithreading"]
   },
   {
     title: "GlobalGuide AI Travel Planner",
