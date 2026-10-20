@@ -15,13 +15,14 @@ export const educationData: Education[] = [
     degree: "Master of Science in Applied Data Intelligence",
     location: "San Jose, CA",
     startDateText: "January 2025",
-    endDateText: "May 2027 (Expected)",
+    endDateText: "December 2026 (Expected)",
     grade: "3.5 GPA",
     coursework: [
-      "Data Structures & Algorithms",
-      "Operating Systems",
       "Distributed Systems",
-      "Object-Oriented Design"
+      "Database Management",
+      "Algorithms",
+      "Cloud Infrastructure",
+      "Machine Learning"
     ],
     logo: "/sjsu-logo.svg"
   }

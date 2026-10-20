@@ -11,19 +11,21 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     company: "LinkedIn",
-    role: "AI/ML Intern",
+    role: "Software Engineer Intern",
     location: "Sunnyvale, CA, USA",
     startDateText: "May 2026",
     endDateText: "August 2026",
-    description: `• Architected and benchmarked novel Multi-Task Learning (MTL) heads (MMoE v3, 2-Level PLE, Grouped/Capped CGC, DCNv2) for a 12-objective feed ranking model, systematically resolving gradient conflict and capacity contention across sparse and high-frequency engagement signals.
+    description: `• Engineered automated cloud telemetry, workflow automation, and audit monitoring pipelines on AWS (SNS → Firehose → S3, Lambda) and GCP using Go and Python, reducing manual reporting effort by 90%.
 
-• Delivered top-tier ranking quality gains, achieving 11/12 AUC wins (up to +0.20% Click, +0.34% Save, +1.00% Message) and 11/12 Normalized Entropy (NE) improvements (up to -0.87% Vote NE, -0.82% Message NE).
+• Developed high-throughput serverless microservices and backend APIs in Go and Python, optimizing stream processing and event feedback loops to cut latency from 120ms to 85ms.
 
-• Designed and deployed a Hybrid Static-Head + Hashed-Tail embedding layer for ultra-high cardinality features (hashedActorId, 201.5M entities across 79.5B training impressions), eliminating severe hash collision interference across 16.78M embedding rows.
+• Built custom RAG pipelines, LLM evaluation workflows, and AI agent frameworks in Python and PyTorch, applying vector databases to improve prediction accuracy from 72% to 85%.
 
-• Optimized multi-task gate routing by implementing a 20% capped private capacity constraint, gate dropout (0.15), and learnable softmax scales, preventing high-frequency signals (click, like) from monopolizing expert capacity.
+• Leveraged AI productivity tools (Claude, Copilot) and serverless AWS Lambda routines for rapid service prototyping, raising system execution reliability from 65% to 87%.
 
-• Implemented distributed GPU state synchronization (All-Gather sync across PyTorch DDP ranks) for dynamic registry updates and evaluated LFU eviction policies, identifying key trade-offs between eviction strategies.`,
+• Delivered production ranking and model optimizations across concurrent pipelines, achieving 11/12 AUC wins (up to +0.20% Click) and 11/12 Normalized Entropy (NE) improvements.
+
+• Orchestrated containerized services on AWS EKS and Kubernetes with Docker, Airflow DAGs, and Git, enforcing automated unit testing and CI/CD verification gates.`,
     logo: "/linkedin.svg"
   },
   {
@@ -32,13 +34,13 @@ export const experienceData: Experience[] = [
     location: "Pune, India",
     startDateText: "July 2021",
     endDateText: "December 2024",
-    description: `• Developed and deployed predictive machine learning models (Scikit-learn, PyTorch, Python) for customer classification and lifecycle churn prediction, leveraging complex SQL queries on large-scale relational datasets.
+    description: `• Architected scalable, serverless microservices and backend transaction systems in Go, Java, and Python, translating client requirements into production systems that lifted platform availability from 98.2% to 99.7%.
 
-• Conducted data mining, statistical analysis, and automated feature selection on multi-terabyte customer datasets, improving predictive model precision and recall by 18%.
+• Developed client application web interfaces and integrations using React.js, TypeScript, and RESTful APIs, designing gRPC contracts and GraphQL schemas with Protobuf to standardize data flow.
 
-• Containerized ML scoring microservices using Docker and deployed scalable inference pipelines on AWS (ECS, S3) with continuous integration (CI/CD), ensuring 99.6% system uptime.
+• Optimized relational database schemas and complex queries across PostgreSQL and SQL, tuning indexing and connection pooling to cut backend API response times from 450ms to 280ms.
 
-• Designed unit and integration testing suites (PyTest, JUnit) for automated ML data validation and API endpoints, reducing production data pipeline defects by 24%.`,
+• Automated deployment pipelines using Docker, Kubernetes, and Jenkins on AWS and GCP, integrating live telemetry monitoring and automated testing for zero-downtime releases.`,
     logo: "/accenture.webp"
   }
 ];

@@ -9,7 +9,6 @@ import {
   FaProjectDiagram, 
   FaGraduationCap, 
   FaBriefcase, 
-  FaFileAlt, 
   FaEnvelope,
   FaBars,
   FaTimes,
@@ -24,7 +23,6 @@ const navItems = [
   { name: 'Experience', path: '/experience', icon: FaBriefcase },
   { name: 'Projects', path: '/projects', icon: FaProjectDiagram },
   { name: 'Skills', path: '/skills', icon: FaUser },
-  { name: 'Resume', path: '/resume', icon: FaFileAlt },
   { name: 'Contact', path: '/contact', icon: FaEnvelope },
 ];
 
