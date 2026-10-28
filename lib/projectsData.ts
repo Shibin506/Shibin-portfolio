@@ -26,14 +26,6 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
   },
   {
-    title: "Open Source Contributor: rocketride-server (17.8k Stars)",
-    description: [
-      "Contributed core runtime and execution optimizations to a multithreaded C++17/Python engine executing AI workflows across 130+ Python nodes, 15+ LLM providers, and databases.",
-      "Implemented exact-once delivery semantics for payload queues and integrated Model Context Protocol (MCP) in production environments."
-    ],
-    techStack: ["C++17", "Python", "Model Context Protocol (MCP)", "LLM Providers", "Multithreading"]
-  },
-  {
     title: "GlobalGuide AI Travel Planner",
     description: [
       "Developed an advanced AI application leveraging Groq LLM and LangGraph for comprehensive, personalized travel itinerary generation, integrating real-time data from various APIs.",
