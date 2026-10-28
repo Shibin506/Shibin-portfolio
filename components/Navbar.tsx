@@ -7,6 +7,7 @@ import {
   FaHome, 
   FaUser, 
   FaProjectDiagram, 
+  FaCodeBranch, 
   FaGraduationCap, 
   FaBriefcase, 
   FaEnvelope,
@@ -22,6 +23,7 @@ const navItems = [
   { name: 'Education', path: '/education', icon: FaGraduationCap },
   { name: 'Experience', path: '/experience', icon: FaBriefcase },
   { name: 'Projects', path: '/projects', icon: FaProjectDiagram },
+  { name: 'Open Source', path: '/open-source', icon: FaCodeBranch },
   { name: 'Skills', path: '/skills', icon: FaUser },
   { name: 'Contact', path: '/contact', icon: FaEnvelope },
 ];

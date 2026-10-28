@@ -107,7 +107,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Software engineer with 3+ years of experience building serverless cloud platforms, Go microservices, React/TypeScript client applications, and production RAG pipelines. Completing an MS in Applied Data Intelligence at San Jose State University (December 2026) and seeking new grad software engineering roles. Most recently a Software Engineer Intern at LinkedIn, and previously a Software Engineer at Accenture designing high-availability AWS architectures, AI workflows, and customer-facing software.
+              Software engineer with 2+ years of experience building serverless cloud platforms, Go microservices, React/TypeScript client applications, and production RAG pipelines. Completing an MS in Applied Data Intelligence at San Jose State University (December 2026) and seeking new grad software engineering roles. Most recently a Software Engineer Intern at LinkedIn, and previously a Software Engineer at Accenture designing high-availability AWS architectures, AI workflows, and customer-facing software.
             </motion.p>
 
             {/* Social Links */}
