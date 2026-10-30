@@ -1,0 +1,24 @@
+node_modules/
+dist/
+dist-bundle/
+.orchestrator-deploy-tmp/
+out/
+.env
+*.log
+*.mp4
+quicky.env
+
+.convex-tmp/
+.bench/
+
+# macOS / packaging
+.DS_Store
+release/
+apps/desktop/.pack-stage/
+apps/desktop/.pack-stage-win/
+
+# Local visual QA exports (do not commit)
+apps/desktop/build/qa-*.png
+
+# Accuracy-eval run outputs
+services/orchestrator/evals/results/
