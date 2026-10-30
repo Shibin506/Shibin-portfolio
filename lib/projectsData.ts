@@ -26,6 +26,18 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
   },
   {
+    title: "ScreenSensei — On-Screen AI Tutor (Cal Hacks 13.0)",
+    description: [
+      "Team project built at Cal Hacks 13.0: a desktop tutor for Windows and macOS that reads your screen, points at what matters, draws hand-drawn marks and working beside the problem, and talks you through it step by step.",
+      "Fastify orchestrator streams Claude's answer as structured steps, so voice narration starts about 3 seconds after a question while the rest of the lesson is still being generated.",
+      "Cartesia text-to-speech drives the timing: each step's pointer and drawings appear when its audio starts, keeping voice and visuals in sync.",
+      "Guided lessons for math, chess, software and languages watch the screen for the user's next action and check it before continuing, backed by a 13-case accuracy eval set and 380+ unit tests."
+    ],
+    techStack: ["TypeScript", "Electron", "React", "Fastify", "Anthropic Claude", "Cartesia", "Convex", "Elastic / OpenTelemetry", "Vitest", "pnpm"],
+    github: "https://github.com/Shibin506/ai-desktop",
+    demo: ""
+  },
+  {
     title: "GlobalGuide AI Travel Planner",
     description: [
       "Developed an advanced AI application leveraging Groq LLM and LangGraph for comprehensive, personalized travel itinerary generation, integrating real-time data from various APIs.",
