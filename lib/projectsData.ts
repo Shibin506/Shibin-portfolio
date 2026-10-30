@@ -26,6 +26,50 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
   },
   {
+    title: "StrataKV — Crash-Safe Storage Engine in Rust",
+    description: [
+      "Built a crash-safe key-value storage engine as a log-structured merge tree, the design behind LevelDB, RocksDB and Cassandra: checksummed write-ahead log, SSTables with Bloom filters and block index, and levelled background compaction.",
+      "Added MVCC snapshots and range scans that stay consistent while writers and compaction keep running; crash tests kill a real process at every step of every disk operation.",
+      "Benchmarked against RocksDB and SQLite on 1M keys: level with RocksDB on random writes (381K vs 386K ops/s) and 1.6x faster on in-memory point reads."
+    ],
+    techStack: ["Rust", "LSM Tree", "Write-Ahead Log", "MVCC", "Bloom Filters", "Criterion"],
+    github: "https://github.com/Shibin506/StrataKV",
+    demo: ""
+  },
+  {
+    title: "redos-proof — ReDoS Detector with Proofs",
+    description: [
+      "Built a tool that finds regular expressions vulnerable to catastrophic backtracking (ReDoS) in JavaScript, TypeScript, Python and Ruby code, using a step-counted model of how each engine backtracks.",
+      "Proves every finding by generating the attack input and running it on the real Node, Python and Ruby engines at growing lengths; 100% recall and 0 false positives on a self-verifying corpus.",
+      "Ships as a CLI, pre-commit hook and GitHub Action with SARIF output, so it can gate CI."
+    ],
+    techStack: ["Rust", "Regex Engines", "NFA", "Static Analysis", "GitHub Actions", "SARIF"],
+    github: "https://github.com/Shibin506/redos-proof",
+    demo: ""
+  },
+  {
+    title: "MedBridge — AI Discharge-Care Assistant",
+    description: [
+      "Turns hospital discharge papers into a plan patients can follow: an LLM extracts medicines, appointments and warning signs with source quotes, and code verifies every item, drug name and number against the original paper.",
+      "Generates plain-language plans in 8 languages with code-checked safety rules for duplicate ingredients, stopped medicines and daily dose limits.",
+      "Runs daily check-ins over SMS (Twilio) and Telegram, escalating worrying replies to a care-team dashboard; covered by 804 automated tests, including a 336-case safety evaluation."
+    ],
+    techStack: ["Python", "FastAPI", "Next.js", "TypeScript", "LLMs", "Twilio", "Telegram", "SQLite"],
+    github: "https://github.com/Shibin506/MedBridge",
+    demo: ""
+  },
+  {
+    title: "Minutes — AI Meeting Copilot",
+    description: [
+      "Upload a Zoom, Meet or Teams transcript and get a summary, decisions and action items, each linked to the exact transcript timestamp; the model cites segment numbers so timestamps cannot drift.",
+      "Ask questions across all meetings and get streamed answers (server-sent events) with numbered citations, retrieved from an SQLite FTS5 BM25 index.",
+      "Retrieval scores hit@3 = 1.00 on a 20-question eval that runs in CI; fully Dockerized with GitHub Actions."
+    ],
+    techStack: ["Python", "FastAPI", "SQLite FTS5", "Claude API", "React", "TypeScript", "Docker", "GitHub Actions"],
+    github: "https://github.com/Shibin506/minutes-ai",
+    demo: ""
+  },
+  {
     title: "ScreenSensei — On-Screen AI Tutor (Cal Hacks 13.0)",
     description: [
       "Team project built at Cal Hacks 13.0: a desktop tutor for Windows and macOS that reads your screen, points at what matters, draws hand-drawn marks and working beside the problem, and talks you through it step by step.",
@@ -45,7 +89,7 @@ export const projectsData: Project[] = [
       "Built a full-stack solution with a high-performance FastAPI backend handling API requests in milliseconds."
     ],
     techStack: ["Python", "FastAPI", "Streamlit", "Groq LLM", "LangGraph", "Pydantic", "Requests", "OpenWeatherMap API", "Google Places API", "ExchangeRate-API"],
-    github: "https://github.com/Shibin506/globalguide-ai-travel-planner",
+    github: "https://github.com/Shibin506/GlobalGuide-AI-Travel-Planner",
     demo: ""
   },
   {
@@ -55,7 +99,7 @@ export const projectsData: Project[] = [
       "Utilized HuggingFace Transformers for text embedding and Faiss for vector search, achieving 91% semantic retrieval accuracy across 5K+ healthcare records."
     ],
     techStack: ["HuggingFace", "Faiss", "LangChain", "Mistral 7B", "Streamlit", "Python"],
-    github: "https://github.com/Shibin506/ai-medical-chatbot",
+    github: "https://github.com/Shibin506/AI-MEDICAL-CHATBOT-with-RAG",
     demo: ""
   },
   {
@@ -67,7 +111,7 @@ export const projectsData: Project[] = [
       "Built over 20+ compelling visualizations using Matplotlib and Power BI, showcasing trends in genres, top artists, and track popularity."
     ],
     techStack: ["AWS S3", "Glue", "Snowflake", "Python", "Matplotlib", "Power BI", "Spotify API"],
-    github: "https://github.com/Shibin506/spotify-data-analysis",
+    github: "https://github.com/Shibin506/Spotifyzer",
     demo: ""
   },
   {
@@ -79,7 +123,7 @@ export const projectsData: Project[] = [
       "Developed a Streamlit dashboard to visualize sentiment trends in real time, updated every 60 seconds."
     ],
     techStack: ["Python", "PySpark", "TextBlob", "VADER", "Apache NiFi", "AWS S3", "Streamlit"],
-    github: "https://github.com/Shibin506/yelp-sentiment-analysis",
+    github: "https://github.com/Shibin506/Sentiment-Analysis-on-Yelp-Reviews",
     demo: ""
   }
 ]; 
