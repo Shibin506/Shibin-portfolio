@@ -17,13 +17,15 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Python", "Rust", "AWS Lambda", "RAG Pipelines", "Vector Databases", "Kafka", "Apache Flink", "Docker", "Kubernetes", "AWS EKS"]
   },
   {
-    title: "Scalable RAG Analytics & Client Integration Platform",
+    title: "Lumen — RAG Analytics & Client Integration Platform",
     description: [
-      "Developed a scalable analytics storage and client integration platform in Go, Java, and Python, automating schema validation, vector database indexing, and RAG data pipelines to PostgreSQL and AWS S3.",
-      "Orchestrated distributed ETL workflows with Apache Spark, Trino, and Airflow, applying data access optimizations that accelerated analytical query retrieval speed by 35%.",
-      "Built customer-facing web interfaces and integration endpoints using TypeScript, React.js, RESTful APIs, GraphQL, and gRPC, integrating real-time telemetry and feedback loops."
+      "Built a multi-service platform in Go, Java and Python: a Go gateway ingests client events over gRPC and REST with per-tenant JSON Schema validation (~78K events/s from one client) into an S3 data lake, and a Java GraphQL API versions schemas and rejects breaking changes.",
+      "Orchestrated a nightly Airflow pipeline where Spark compacts raw JSON into partitioned, de-duplicated Parquet and Trino builds rollups with row-count reconciliation, cutting dashboard query latency by 70% over 2.35M events.",
+      "Built a RAG assistant with hybrid pgvector + full-text retrieval, cited streaming answers and feedback-aware ranking (0.89 hit@3 on a 26-question eval), plus a React + TypeScript dashboard for real-time telemetry."
     ],
-    techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
+    techStack: ["Go (Golang)", "Java", "Python", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "pgvector", "S3", "Docker"],
+    github: "https://github.com/Shibin506/rag-analytics-platform",
+    demo: ""
   },
   {
     title: "StrataKV — Crash-Safe Storage Engine in Rust",
