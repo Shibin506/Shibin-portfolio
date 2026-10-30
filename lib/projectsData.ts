@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
   },
   {
-    title: "Quicky.AI — On-Screen AI Tutor (Cal Hacks 13.0)",
+    title: "ScreenSensei — On-Screen AI Tutor (Cal Hacks 13.0)",
     description: [
       "Team project built at Cal Hacks 13.0: a desktop tutor for Windows and macOS that reads your screen, points at what matters, draws hand-drawn marks and working beside the problem, and talks you through it step by step.",
       "Fastify orchestrator streams Claude's answer as structured steps, so voice narration starts about 3 seconds after a question while the rest of the lesson is still being generated.",
