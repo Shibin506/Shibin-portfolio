@@ -8,6 +8,17 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: "Minutes: AI Meeting Copilot",
+    description: [
+      "Built an AI meeting copilot that turns Zoom, Meet and Teams transcripts into summaries, decisions and owner-assigned action items, each linked to the exact moment it was said.",
+      "Designed retrieval-augmented Q&A across meetings with SQLite FTS5 (BM25) over speaker-turn chunks, streaming cited answers from Claude over server-sent events; an offline eval finds the answer in the top 3 results for 20/20 questions.",
+      "Used Claude structured outputs validated with Pydantic, with the model citing transcript segment numbers that the server maps to exact timestamps, plus a no-API-key demo mode, 40 backend tests, Docker Compose and GitHub Actions CI."
+    ],
+    techStack: ["Python", "FastAPI", "Claude API", "RAG", "SQLite FTS5", "Pydantic", "React", "TypeScript", "Vite", "Docker", "GitHub Actions"],
+    github: "https://github.com/Shibin506/minutes-ai",
+    demo: ""
+  },
+  {
     title: "Autonomous AI Agent & Serverless Workflow Engine",
     description: [
       "Engineered an autonomous AI agent framework and serverless workflow engine in Go, Python, and Rust, utilizing custom RAG pipelines, LLMs, and Kafka to automate complex manual handoffs.",
