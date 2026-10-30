@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
       "Guided lessons for math, chess, software and languages watch the screen for the user's next action and check it before continuing, backed by a 13-case accuracy eval set and 380+ unit tests."
     ],
     techStack: ["TypeScript", "Electron", "React", "Fastify", "Anthropic Claude", "Cartesia", "Convex", "Elastic / OpenTelemetry", "Vitest", "pnpm"],
-    github: "https://github.com/Shibin506/quicky-ai",
+    github: "https://github.com/Shibin506/ai-desktop",
     demo: ""
   },
   {
