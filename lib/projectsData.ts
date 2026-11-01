@@ -28,13 +28,15 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Python", "Rust", "AWS Lambda", "RAG Pipelines", "Vector Databases", "Kafka", "Apache Flink", "Docker", "Kubernetes", "AWS EKS"]
   },
   {
-    title: "Scalable RAG Analytics & Client Integration Platform",
+    title: "Lumen: RAG Analytics & Client Integration Platform",
     description: [
-      "Developed a scalable analytics storage and client integration platform in Go, Java, and Python, automating schema validation, vector database indexing, and RAG data pipelines to PostgreSQL and AWS S3.",
-      "Orchestrated distributed ETL workflows with Apache Spark, Trino, and Airflow, applying data access optimizations that accelerated analytical query retrieval speed by 35%.",
-      "Built customer-facing web interfaces and integration endpoints using TypeScript, React.js, RESTful APIs, GraphQL, and gRPC, integrating real-time telemetry and feedback loops."
+      "Built a Go ingestion gateway (gRPC + REST) that validates client events against per-tenant JSON Schemas and lands them in an S3 data lake, backed by a Java GraphQL schema registry that blocks breaking schema changes.",
+      "Orchestrated a nightly Airflow + Apache Spark pipeline that compacts raw JSON into partitioned Parquet and rollups for Trino, cutting dashboard query time by 70% (4.0s to 1.2s across five queries on 2.35M events).",
+      "Shipped a RAG assistant (FastAPI, pgvector, hybrid vector + keyword retrieval) that streams cited answers and learns from user feedback, with a React + TypeScript dashboard for telemetry, analytics and schema editing."
     ],
-    techStack: ["Go (Golang)", "Java", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "AWS S3"]
+    techStack: ["Go (Golang)", "Java", "Python", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "pgvector", "AWS S3", "RAG"],
+    github: "https://github.com/Shibin506/rag-analytics-platform",
+    demo: ""
   },
   {
     title: "GlobalGuide AI Travel Planner",
