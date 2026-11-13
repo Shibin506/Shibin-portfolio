@@ -4,6 +4,9 @@ export interface Project {
   techStack: string[];
   github?: string;
   demo?: string;
+  /** Path to a short demo video in /public, shown inline on the card. */
+  video?: string;
+  videoPoster?: string;
 }
 
 export const projectsData: Project[] = [
@@ -16,7 +19,9 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Python", "FastAPI", "PostgreSQL", "Claude API", "GitHub Apps", "SQLAlchemy", "Docker", "Prometheus", "GitHub Actions"],
     github: "https://github.com/Shibin506/mender",
-    demo: ""
+    demo: "",
+    video: "/projects/mender-demo.mp4",
+    videoPoster: "/projects/mender-demo-poster.jpg"
   },
   {
     title: "Autonomous AI Agent & Serverless Workflow Engine",
