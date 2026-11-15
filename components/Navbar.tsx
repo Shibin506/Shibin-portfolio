@@ -1,139 +1,122 @@
 'use client';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { 
-  FaHome, 
-  FaUser, 
-  FaProjectDiagram, 
-  FaCodeBranch, 
-  FaGraduationCap, 
-  FaBriefcase, 
-  FaEnvelope,
-  FaBars,
-  FaTimes,
-  FaSun,
-  FaMoon
-} from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
 
-const navItems = [
-  { name: 'Home', path: '/', icon: FaHome },
-  { name: 'Education', path: '/education', icon: FaGraduationCap },
-  { name: 'Experience', path: '/experience', icon: FaBriefcase },
-  { name: 'Projects', path: '/projects', icon: FaProjectDiagram },
-  { name: 'Open Source', path: '/open-source', icon: FaCodeBranch },
-  { name: 'Skills', path: '/skills', icon: FaUser },
-  { name: 'Contact', path: '/contact', icon: FaEnvelope },
-];
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2';
+import { sections } from '@/lib/site';
 
 export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
   const pathname = usePathname();
+  const onHome = pathname === '/';
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    setMounted(true);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12);
+      if (window.scrollY < 200) setActive(null); // back on the hero: nothing highlighted
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  if (!mounted) return null;
+  // Highlight the section currently in view.
+  useEffect(() => {
+    if (!onHome) return setActive(null);
+    const els = sections.map((s) => document.getElementById(s.id)).filter(Boolean) as HTMLElement[];
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length) setActive(visible[0].target.id);
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [onHome]);
+
+  const href = (id: string) => (onHome ? `#${id}` : `/#${id}`);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className={`text-3xl font-extrabold text-transparent bg-clip-text px-4 py-2 ${
-                  theme === 'dark' 
-                    ? 'bg-gradient-to-r from-emerald-300 to-teal-500' 
-                    : 'bg-gradient-to-r from-blue-500 to-blue-700'
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition ${
+        scrolled || open ? 'border-b border-line bg-bg/80 backdrop-blur-md' : 'border-b border-transparent'
+      }`}
+    >
+      <nav className="mx-auto flex h-16 max-w-page items-center justify-between px-5 sm:px-8" aria-label="Main">
+        <Link href="/" className="font-display text-lg font-semibold tracking-tight">
+          shibin<span className="text-accent">.</span>
+        </Link>
+
+        <ul className="hidden items-center gap-1 lg:flex">
+          {sections.map((s) => (
+            <li key={s.id}>
+              <a
+                href={href(s.id)}
+                className={`rounded-lg px-3 py-2 text-sm transition ${
+                  active === s.id ? 'text-accent' : 'text-muted hover:text-fg'
                 }`}
+                aria-current={active === s.id ? 'true' : undefined}
               >
-                ST
-              </motion.div>
-            </Link>
-          </div>
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex flex-1 items-center justify-center space-x-6 mx-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`flex items-center gap-2 text-lg font-bold transition-colors duration-200 px-3 py-2 rounded-lg ${
-                  pathname === item.path
-                    ? 'text-primary dark:text-primary-light bg-primary/5 dark:bg-primary-light/5'
-                    : 'text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary-light hover:bg-gray-50 dark:hover:bg-gray-800/50'
-                }`}
-              >
-                <item.icon className="w-5 h-5" />
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Theme Toggle and Mobile Menu */}
-          <div className="flex items-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-lg text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
-            </motion.button>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                aria-label="Toggle menu"
-              >
-                {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
+        <div className="flex items-center gap-1">
+          <button
+            type="button"
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+            className="rounded-lg p-2 text-lg text-muted transition hover:text-accent"
+            aria-label="Toggle light and dark mode"
+          >
+            {mounted && (resolvedTheme === 'dark' ? <HiOutlineSun /> : <HiOutlineMoon />)}
+          </button>
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            className="rounded-lg p-2 text-xl text-muted transition hover:text-fg lg:hidden"
+            aria-label="Menu"
+            aria-expanded={open}
+          >
+            {open ? <HiX /> : <HiOutlineMenuAlt3 />}
+          </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Navigation Menu */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {open && (
+          <motion.ul
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white/95 dark:bg-gray-900/95 border-b border-gray-200 dark:border-gray-800"
+            className="overflow-hidden px-5 pb-4 lg:hidden"
           >
-            <div className="px-4 py-2 space-y-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-base font-semibold transition-colors ${
-                    pathname === item.path
-                      ? 'bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light'
-                      : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                  }`}
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={href(s.id)}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-2.5 text-muted hover:bg-surface hover:text-fg"
                 >
-                  <item.icon className="w-5 h-5" />
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </motion.ul>
         )}
       </AnimatePresence>
-    </nav>
+    </header>
   );
 }

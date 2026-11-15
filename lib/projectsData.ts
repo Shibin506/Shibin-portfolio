@@ -7,6 +7,8 @@ export interface Project {
   /** Path to a short demo video in /public, shown inline on the card. */
   video?: string;
   videoPoster?: string;
+  /** Shown as a large card at the top of the Projects section. */
+  featured?: boolean;
 }
 
 export const projectsData: Project[] = [
@@ -19,6 +21,7 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Python", "FastAPI", "PostgreSQL", "Claude API", "Gemini API", "GitHub Apps", "SQLAlchemy", "Docker", "Prometheus", "GitHub Actions"],
     github: "https://github.com/Shibin506/mender",
+    featured: true,
     demo: "",
     video: "/projects/mender-demo.mp4",
     videoPoster: "/projects/mender-demo-poster.jpg"
@@ -41,6 +44,7 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Go (Golang)", "Java", "Python", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "pgvector", "S3", "Docker"],
     github: "https://github.com/Shibin506/rag-analytics-platform",
+    featured: true,
     demo: ""
   },
   {
@@ -52,6 +56,7 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Rust", "LSM Tree", "Write-Ahead Log", "MVCC", "Bloom Filters", "Criterion"],
     github: "https://github.com/Shibin506/StrataKV",
+    featured: true,
     demo: ""
   },
   {
@@ -63,6 +68,7 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Rust", "Regex Engines", "NFA", "Static Analysis", "GitHub Actions", "SARIF"],
     github: "https://github.com/Shibin506/redos-proof",
+    featured: true,
     demo: ""
   },
   {
@@ -74,6 +80,7 @@ export const projectsData: Project[] = [
     ],
     techStack: ["Python", "FastAPI", "Next.js", "TypeScript", "LLMs", "Twilio", "Telegram", "SQLite"],
     github: "https://github.com/Shibin506/MedBridge",
+    featured: true,
     demo: ""
   },
   {
