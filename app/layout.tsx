@@ -11,10 +11,10 @@ import { Providers } from './providers';
 export const metadata: Metadata = {
   title: 'Shibin Biji Thomas — Software Engineer',
   description:
-    'Software engineer building backend systems and AI tooling. Former Software Engineer Intern at LinkedIn and Software Engineer at Accenture; MS at San Jose State (Dec 2026), open to new-grad roles.',
+    'Software engineer with hands-on AI/ML, full-stack and cloud backend experience as a Software Engineer Intern at LinkedIn and a Software Engineer at Accenture. MS at San Jose State (Dec 2026), open to new-grad roles.',
   openGraph: {
     title: 'Shibin Biji Thomas — Software Engineer',
-    description: 'Backend systems and AI tooling that hold up in production.',
+    description: 'Software engineer with hands-on AI/ML, full-stack and cloud backend experience at LinkedIn and Accenture.',
     type: 'website',
   },
 };
