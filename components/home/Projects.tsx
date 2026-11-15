@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import DemoVideo from './DemoVideo';
 import Section, { Reveal } from './Section';
 import { projectsData } from '@/lib/projectsData';
 import type { Project } from '@/types';
@@ -24,8 +25,8 @@ export default function Projects() {
     <Section id="projects" kicker="projects" title="Things I've built">
       <div className="grid gap-6 md:grid-cols-2">
         {featured.map((p, i) => (
-          <Reveal key={p.title} delay={(i % 2) * 0.08} className={p.video ? 'md:col-span-2' : ''}>
-            <FeaturedCard project={p} />
+          <Reveal key={p.title} delay={i === 0 ? 0 : ((i - 1) % 2) * 0.08} className={i === 0 ? 'md:col-span-2' : ''}>
+            <FeaturedCard project={p} wide={i === 0} />
           </Reveal>
         ))}
       </div>
@@ -51,27 +52,20 @@ export default function Projects() {
   );
 }
 
-function FeaturedCard({ project: p }: { project: Project }) {
+function FeaturedCard({ project: p, wide }: { project: Project; wide: boolean }) {
   const { name, subtitle } = splitTitle(p.title);
   return (
-    <article className={`panel group h-full overflow-hidden transition hover:-translate-y-1 hover:border-accent/50 ${p.video ? 'grid lg:grid-cols-[1.15fr_1fr]' : ''}`}>
+    <article
+      className={`panel group flex h-full flex-col overflow-hidden transition hover:-translate-y-1 hover:border-accent/50 ${
+        wide && p.video ? 'lg:grid lg:grid-cols-[1.15fr_1fr]' : ''
+      }`}
+    >
       {p.video && (
-        <div className="flex items-center border-b border-line bg-surface2/40 p-3 sm:p-4 lg:border-b-0 lg:border-r">
-          <video
-            src={p.video}
-            poster={p.videoPoster}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            preload="metadata"
-            aria-label={`${name} demo video`}
-            className="w-full rounded-lg border border-line bg-black"
-          />
+        <div className={`flex items-center border-b border-line bg-surface2/40 p-3 sm:p-4 ${wide ? 'lg:border-b-0 lg:border-r' : ''}`}>
+          <DemoVideo src={p.video} poster={p.videoPoster} label={`${name} demo video`} />
         </div>
       )}
-      <div className="flex h-full flex-col p-6 sm:p-7">
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
         <div className="flex items-start justify-between gap-4">
           <div>
             <span className="rounded-full bg-accent/15 px-2.5 py-0.5 font-mono text-[0.68rem] uppercase tracking-wider text-accent">

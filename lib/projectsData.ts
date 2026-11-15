@@ -45,6 +45,8 @@ export const projectsData: Project[] = [
     techStack: ["Go (Golang)", "Java", "Python", "TypeScript", "React.js", "GraphQL", "gRPC", "Apache Spark", "Trino", "Airflow", "PostgreSQL", "pgvector", "S3", "Docker"],
     github: "https://github.com/Shibin506/rag-analytics-platform",
     featured: true,
+    video: "/projects/lumen-demo.mp4",
+    videoPoster: "/projects/lumen-demo-poster.jpg",
     demo: ""
   },
   {
@@ -57,6 +59,8 @@ export const projectsData: Project[] = [
     techStack: ["Rust", "LSM Tree", "Write-Ahead Log", "MVCC", "Bloom Filters", "Criterion"],
     github: "https://github.com/Shibin506/StrataKV",
     featured: true,
+    video: "/projects/stratakv-demo.mp4",
+    videoPoster: "/projects/stratakv-demo-poster.jpg",
     demo: ""
   },
   {
@@ -69,6 +73,8 @@ export const projectsData: Project[] = [
     techStack: ["Rust", "Regex Engines", "NFA", "Static Analysis", "GitHub Actions", "SARIF"],
     github: "https://github.com/Shibin506/redos-proof",
     featured: true,
+    video: "/projects/redos-proof-demo.mp4",
+    videoPoster: "/projects/redos-proof-demo-poster.jpg",
     demo: ""
   },
   {
@@ -81,6 +87,8 @@ export const projectsData: Project[] = [
     techStack: ["Python", "FastAPI", "Next.js", "TypeScript", "LLMs", "Twilio", "Telegram", "SQLite"],
     github: "https://github.com/Shibin506/MedBridge",
     featured: true,
+    video: "/projects/medbridge-demo.mp4",
+    videoPoster: "/projects/medbridge-demo-poster.jpg",
     demo: ""
   },
   {

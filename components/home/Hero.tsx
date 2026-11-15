@@ -81,10 +81,6 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-accent/40 via-transparent to-accent2/40 blur-2xl" aria-hidden />
             <Portrait className="h-[26rem] w-[21rem]" />
-            <div className="panel absolute -bottom-5 -left-8 px-4 py-3 shadow-xl">
-              <p className="font-mono text-[0.7rem] uppercase tracking-widest text-muted">now</p>
-              <p className="mt-0.5 text-sm">Finishing my MS · building <span className="text-accent">Mender</span></p>
-            </div>
           </div>
         </motion.div>
       </div>

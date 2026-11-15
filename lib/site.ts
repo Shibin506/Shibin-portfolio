@@ -5,7 +5,8 @@ export const site = {
   name: 'Shibin Biji Thomas',
   shortName: 'Shibin',
   role: 'Software Engineer',
-  tagline: 'I build backend systems and AI tooling that hold up in production.',
+  tagline:
+    'Hands-on experience in AI/ML, full-stack and cloud backend engineering, from shipping production systems at LinkedIn and Accenture.',
   status: 'Open to new-grad SWE roles · MS graduating Dec 2026',
   email: 'shibinbiji2@gmail.com',
   links: {
