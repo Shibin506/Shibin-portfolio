@@ -17,7 +17,7 @@ export const experienceData: Experience[] = [
     endDateText: "August 2026",
     description: `• Engineered automated cloud telemetry, workflow automation, and audit monitoring pipelines on AWS (SNS → Firehose → S3, Lambda) and GCP using Go and Python, reducing manual reporting effort by 90%.
 
-• Delivered production ranking-model optimizations for the feed recommendation system in PyTorch across concurrent pipelines, achieving 11/12 AUC wins (up to +0.20% Click) and 11/12 Normalized Entropy (NE) improvements.
+• Delivered production ranking-model optimizations for the feed recommendation system in PyTorch and TensorFlow across concurrent pipelines, achieving 11/12 AUC wins (up to +0.20% Click) and 11/12 Normalized Entropy (NE) improvements.
 
 • Developed high-throughput serverless microservices and backend APIs in Go and Python, optimizing stream processing and event feedback loops to cut latency from 120ms to 85ms.
 

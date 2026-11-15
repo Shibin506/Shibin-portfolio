@@ -2,7 +2,7 @@ import Section, { Reveal } from './Section';
 import { site } from '@/lib/site';
 
 const focus = [
-  'ML ranking & recommendation systems (PyTorch)',
+  'ML ranking & recommendation systems (PyTorch, TensorFlow)',
   'LLM apps, RAG & evaluation',
   'Full-stack web apps (React, Next.js, TypeScript)',
   'Backend & distributed systems (Go, Python, Java)',
