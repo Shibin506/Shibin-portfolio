@@ -1,40 +1,18 @@
-'use client';
-import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-
-const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/Shibin506', icon: FaGithub },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shibin-biji-593228183/', icon: FaLinkedin },
-  { name: 'Email', url: 'mailto:shibinbiji2@gmail.com', icon: FaEnvelope },
-];
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { site } from '@/lib/site';
 
 export default function Footer() {
   return (
-    <footer className="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-800 backdrop-blur-md shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex flex-col items-center space-y-4">
-          {/* Social Links */}
-          <div className="flex items-center space-x-6">
-            {socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary-light transition-colors"
-              >
-                <link.icon className="w-5 h-5" />
-              </motion.a>
-            ))}
-          </div>
-          
-          {/* Copyright */}
-          <div className="text-sm text-gray-600 dark:text-gray-300 text-center">
-            © {new Date().getFullYear()} Shibin Biji Thomas. All rights reserved.
-          </div>
+    <footer className="border-t border-line">
+      <div className="mx-auto flex max-w-page flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted sm:flex-row sm:px-8">
+        <p>
+          © {new Date().getFullYear()} {site.name} · built with Next.js & Tailwind
+        </p>
+        <div className="flex items-center gap-1 text-lg">
+          <a href={site.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 hover:text-accent"><FaGithub /></a>
+          <a href={site.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 hover:text-accent"><FaLinkedin /></a>
+          <a href={`mailto:${site.email}`} aria-label="Email" className="p-2 hover:text-accent"><HiOutlineMail /></a>
         </div>
       </div>
     </footer>

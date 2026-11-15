@@ -17,14 +17,14 @@ export default function PageLayout({ children, title, description, actions }: Pa
       transition={{ duration: 0.5 }}
       className="flex-1 pt-24 pb-12"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div className="mx-auto h-full max-w-page px-5 sm:px-8">
         <motion.div
           initial={{ y: -20 }}
           animate={{ y: 0 }}
           className="mb-8"
         >
           <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold text-primary dark:text-primary-light">
+            <h1 className="font-display text-4xl font-semibold tracking-tight">
               {title}
             </h1>
             {actions && (
@@ -34,7 +34,7 @@ export default function PageLayout({ children, title, description, actions }: Pa
             )}
           </div>
           {description && (
-            <p className="mt-2 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mt-2 text-lg text-muted">
               {description}
             </p>
           )}
