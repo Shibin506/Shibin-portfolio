@@ -4,19 +4,24 @@ export interface Project {
   techStack: string[];
   github?: string;
   demo?: string;
+  /** Path to a short demo video in /public, shown inline on the card. */
+  video?: string;
+  videoPoster?: string;
 }
 
 export const projectsData: Project[] = [
   {
     title: "Mender — AI CI-Failure Diagnosis GitHub App",
     description: [
-      "Built a GitHub App that diagnoses failed CI runs on pull requests with Claude and posts the root cause plus a fix, which is shown only after it is dry-run applied to the PR's head commit.",
+      "Built a GitHub App that diagnoses failed CI runs on pull requests with an LLM (Claude or Gemini, typed structured output) and posts the root cause plus a fix, shown only if it applies to the PR's head commit; locally it also runs the tests on the patched code and hides fixes that still fail.",
       "Designed a broker-less Postgres job queue (SKIP LOCKED) with webhook signature checks, deduplication, retries with backoff and crashed-job recovery; a concurrency test shows exactly-once claiming across 8 workers.",
-      "Wrote a log extractor covering ~30 failure patterns across 8 toolchains that sends ~0.3% of each log to the model, kept the key error line in 100% of held-out cases, and routes flaky infrastructure failures away from the model with zero false skips."
+      "Wrote a log extractor covering ~30 failure patterns across 8 toolchains that sends ~0.3% of each log to the model and kept the key error line in 100% of held-out cases; on a 30-case eval, Gemini 3.5 Flash got the failure type right in 25 of 26 answered cases and named the file to fix in 17 of 19."
     ],
-    techStack: ["Python", "FastAPI", "PostgreSQL", "Claude API", "GitHub Apps", "SQLAlchemy", "Docker", "Prometheus", "GitHub Actions"],
+    techStack: ["Python", "FastAPI", "PostgreSQL", "Claude API", "Gemini API", "GitHub Apps", "SQLAlchemy", "Docker", "Prometheus", "GitHub Actions"],
     github: "https://github.com/Shibin506/mender",
-    demo: ""
+    demo: "",
+    video: "/projects/mender-demo.mp4",
+    videoPoster: "/projects/mender-demo-poster.jpg"
   },
   {
     title: "Autonomous AI Agent & Serverless Workflow Engine",

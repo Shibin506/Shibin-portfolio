@@ -33,6 +33,21 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
                 {project.title}
               </h2>
               
+              {project.video && (
+                <video
+                  src={project.video}
+                  poster={project.videoPoster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  aria-label={`${project.title} demo video`}
+                  className="mt-3 w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-black"
+                />
+              )}
+
               <ul className="mt-2 space-y-1">
                 {project.description.map((point, idx) => (
                   <motion.li
