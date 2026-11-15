@@ -17,13 +17,13 @@ export const experienceData: Experience[] = [
     endDateText: "August 2026",
     description: `• Engineered automated cloud telemetry, workflow automation, and audit monitoring pipelines on AWS (SNS → Firehose → S3, Lambda) and GCP using Go and Python, reducing manual reporting effort by 90%.
 
+• Delivered production ranking-model optimizations for the feed recommendation system in PyTorch and TensorFlow across concurrent pipelines, achieving 11/12 AUC wins (up to +0.20% Click) and 11/12 Normalized Entropy (NE) improvements.
+
 • Developed high-throughput serverless microservices and backend APIs in Go and Python, optimizing stream processing and event feedback loops to cut latency from 120ms to 85ms.
 
 • Built custom RAG pipelines, LLM evaluation workflows, and AI agent frameworks in Python and PyTorch, applying vector databases to improve prediction accuracy from 72% to 85%.
 
 • Leveraged AI productivity tools (Claude, Copilot) and serverless AWS Lambda routines for rapid service prototyping, raising system execution reliability from 65% to 87%.
-
-• Delivered production ranking and model optimizations across concurrent pipelines, achieving 11/12 AUC wins (up to +0.20% Click) and 11/12 Normalized Entropy (NE) improvements.
 
 • Orchestrated containerized services on AWS EKS and Kubernetes with Docker, Airflow DAGs, and Git, enforcing automated unit testing and CI/CD verification gates.`,
     logo: "/linkedin.svg"

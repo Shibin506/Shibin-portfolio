@@ -12,6 +12,6 @@ export const skillsData: Skill[] = [
   ...make("Database", ["PostgreSQL", "DynamoDB", "Redis", "Cassandra", "Vector Search", "AWS", "GCP"]),
   ...make("Frameworks", ["React", "Next.js", "Node.js", "REST APIs", "gRPC", "Protobuf", "GraphQL", "WebSockets", "Microservices Architecture"]),
   ...make("DevOps", ["Docker", "Kubernetes", "Git", "CI/CD", "Jenkins", "PyTest", "Linux Internals", "System Monitoring"]),
-  ...make("AI/ML", ["RAG Pipelines", "LLMs", "LangChain", "Vector Databases", "AI Agents", "PyTorch"]),
+  ...make("AI/ML", ["PyTorch", "TensorFlow", "Recommendation Systems", "Feed Ranking", "RAG Pipelines", "LLMs", "LLM Evaluation", "LangChain", "Vector Databases", "AI Agents"]),
   ...make("Others", ["Kafka", "Apache Flink", "Apache Spark", "Trino", "Airflow", "Serverless Architecture", "Distributed Systems", "Unit Testing"]),
 ];

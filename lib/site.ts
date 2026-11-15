@@ -19,9 +19,9 @@ export const site = {
     { value: '17.8k★', label: 'open-source AI engine I contribute to', where: 'rocketride' },
   ],
   about: [
-    "I'm a software engineer finishing an MS in Applied Data Intelligence at San Jose State (December 2026). This summer I was a Software Engineer Intern at LinkedIn, building telemetry pipelines, Go and Python services, and LLM evaluation workflows on AWS and GCP.",
-    'Before that I spent three and a half years at Accenture designing serverless microservices, React/TypeScript client apps and high-availability AWS architectures.',
-    'On my own time I build systems to understand them properly, like a crash-safe storage engine in Rust and a GitHub App that diagnoses failed CI runs, and I contribute to rocketride-server, an open-source C++/Python AI pipeline engine. I like measuring things: most of my projects ship with an eval or a benchmark.',
+    "I'm a software engineer finishing an MS at San Jose State (December 2026). At LinkedIn I worked on the feed recommendation system, shipping ranking-model improvements in PyTorch and TensorFlow (11 of 12 AUC wins), along with RAG and LLM evaluation pipelines.",
+    'Before that I spent three and a half years at Accenture as a full-stack engineer, building React and TypeScript apps on Go, Java and Python microservices on AWS, and raising platform availability from 98.2% to 99.7%.',
+    'I also contribute to rocketride-server, a 17.8k-star open-source C++/Python AI pipeline engine, fixing bugs in its CLI and LLM provider integrations.',
   ],
 };
 

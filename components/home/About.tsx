@@ -2,10 +2,11 @@ import Section, { Reveal } from './Section';
 import { site } from '@/lib/site';
 
 const focus = [
-  'Backend & distributed systems',
-  'Cloud infrastructure (AWS, GCP)',
+  'ML ranking & recommendation systems (PyTorch, TensorFlow)',
   'LLM apps, RAG & evaluation',
-  'Storage engines & developer tools',
+  'Full-stack web apps (React, Next.js, TypeScript)',
+  'Backend & distributed systems (Go, Python, Java)',
+  'Cloud infrastructure (AWS, GCP)',
 ];
 
 export default function About() {
