@@ -98,8 +98,11 @@ export const projectsData: Project[] = [
       "Ask questions across all meetings and get streamed answers (server-sent events) with numbered citations, retrieved from an SQLite FTS5 BM25 index.",
       "Retrieval scores hit@3 = 1.00 on a 20-question eval that runs in CI; fully Dockerized with GitHub Actions."
     ],
-    techStack: ["Python", "FastAPI", "SQLite FTS5", "Claude API", "React", "TypeScript", "Docker", "GitHub Actions"],
+    techStack: ["Python", "FastAPI", "SQLite FTS5", "Claude API", "Gemini API", "React", "TypeScript", "Docker", "GitHub Actions"],
     github: "https://github.com/Shibin506/minutes-ai",
+    featured: true,
+    video: "/projects/minutes-demo.mp4",
+    videoPoster: "/projects/minutes-demo-poster.jpg",
     demo: ""
   },
   {
@@ -112,6 +115,9 @@ export const projectsData: Project[] = [
     ],
     techStack: ["TypeScript", "Electron", "React", "Fastify", "Anthropic Claude", "Cartesia", "Convex", "Elastic / OpenTelemetry", "Vitest", "pnpm"],
     github: "https://github.com/Shibin506/ai-desktop",
+    featured: true,
+    video: "/projects/screensensei-demo.mp4",
+    videoPoster: "/projects/screensensei-demo-poster.jpg",
     demo: ""
   },
   {
