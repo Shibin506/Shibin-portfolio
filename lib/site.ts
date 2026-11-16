@@ -21,7 +21,7 @@ export const site = {
   about: [
     "I'm a software engineer finishing an MS at San Jose State (December 2026). At LinkedIn I worked on the feed recommendation system, shipping ranking-model improvements in PyTorch and TensorFlow (11 of 12 AUC wins), along with RAG and LLM evaluation pipelines.",
     'Before that I spent three and a half years at Accenture as a full-stack engineer, building React and TypeScript apps on Go, Java and Python microservices on AWS, and raising platform availability from 98.2% to 99.7%.',
-    'I also contribute to rocketride-server, a 17.8k-star open-source C++/Python AI pipeline engine, fixing bugs in its CLI and LLM provider integrations.',
+    'I also contribute to rocketride-server, a 17.8k-star open-source C++/Python AI pipeline engine, fixing bugs in its CLI, LLM provider integrations and graph-database agent tools.',
   ],
 };
 

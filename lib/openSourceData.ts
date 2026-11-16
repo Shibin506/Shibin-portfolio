@@ -61,4 +61,17 @@ export const openSourceContributions: OpenSourceContribution[] = [
     techStack: ["Python", "Gemini API", "LLM Providers", "Unit Testing"],
     url: "https://github.com/rocketride-org/rocketride-server/pull/2680",
   },
+  {
+    title: "Point agents from a disabled graph execute tool to the read tools",
+    status: "In Review",
+    repo: "rocketride-org/rocketride-server",
+    prNumber: 3276,
+    description: [
+      "Fixed issue #2157: with execute disabled (the default), an agent asking a graph database a read-only question got only \"execute tool is disabled\", which never said what to use instead. The error now points to get_data (and query on FalkorDB), keeping the original wording so existing checks still match.",
+      "The execute tool's description now says whether it can be used on that node, and get_data's opens by saying it is the tool for read-only questions; the change is in shared code, so FalkorDB, Neo4j and RocketRide Graph all get it.",
+      "Added 3 tests that fail without the fix and pass with it; 430 tests pass across the graph and Discord test files.",
+    ],
+    techStack: ["Python", "Graph Databases", "FalkorDB", "Neo4j", "AI Agents", "Unit Testing"],
+    url: "https://github.com/rocketride-org/rocketride-server/pull/3276",
+  },
 ];
