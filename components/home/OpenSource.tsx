@@ -20,7 +20,7 @@ export default function OpenSource() {
           </div>
           <p className="mt-3 max-w-3xl text-muted">{p.summary}</p>
 
-          <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-6 grid gap-4 md:grid-cols-2">
             {openSourceContributions.map((c) => (
               <li key={c.prNumber} className="rounded-xl border border-line bg-surface2/50 p-5">
                 <div className="flex items-center justify-between gap-3">

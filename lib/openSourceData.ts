@@ -74,4 +74,17 @@ export const openSourceContributions: OpenSourceContribution[] = [
     techStack: ["Python", "Graph Databases", "FalkorDB", "Neo4j", "AI Agents", "Unit Testing"],
     url: "https://github.com/rocketride-org/rocketride-server/pull/3276",
   },
+  {
+    title: "Name the missing variable when a database or graph credential is unfilled",
+    status: "In Review",
+    repo: "rocketride-org/rocketride-server",
+    prNumber: 3277,
+    description: [
+      "Part of issue #2712: a database or graph node whose password or token was still an unfilled ${ROCKETRIDE_*} placeholder sent that literal text to the server and failed with an authentication error that never named the variable. The run now stops at start and names the missing variable, and saving the node shows a warning instead of contacting the server.",
+      "Covers the MySQL, PostgreSQL, ClickHouse, FalkorDB, Neo4j, ArangoDB and Redis memory nodes, checking only the credential each auth method actually sends.",
+      "Added 19 tests; 821 node tests and 481 database and config tests pass.",
+    ],
+    techStack: ["Python", "PostgreSQL", "MySQL", "ClickHouse", "Neo4j", "Redis", "Unit Testing"],
+    url: "https://github.com/rocketride-org/rocketride-server/pull/3277",
+  },
 ];
