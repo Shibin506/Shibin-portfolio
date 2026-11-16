@@ -43,7 +43,8 @@ export default function Hero() {
           </motion.p>
 
           <motion.p {...rise(0.26)} className="mt-4 font-mono text-xs text-muted sm:text-sm">
-            prev <span className="text-fg">SWE Intern @ LinkedIn</span> · <span className="text-fg">SWE @ Accenture</span> · MS @ SJSU &rsquo;26
+            prev <span className="text-fg">AI/ML &amp; SWE Intern @ LinkedIn</span> ·{' '}
+            <span className="text-fg">SWE @ Accenture</span> · MS @ SJSU &rsquo;26
           </motion.p>
 
           <motion.div {...rise(0.32)} className="mt-8 flex flex-wrap items-center gap-3">
