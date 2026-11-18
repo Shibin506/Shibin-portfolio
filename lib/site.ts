@@ -14,8 +14,8 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/shibin-biji-593228183/',
   },
   stats: [
-    { value: '120→85ms', label: 'API latency cut', where: 'LinkedIn' },
-    { value: '99.7%', label: 'platform availability, up from 98.2%', where: 'Accenture' },
+    { value: 'AI/ML', label: 'Feed ranking & LLM pipelines', where: 'LinkedIn' },
+    { value: '3.5 yrs', label: 'full-stack software engineer', where: 'Accenture' },
     { value: '17.8k★', label: 'open-source AI engine I contribute to', where: 'rocketride' },
   ],
   about: [
