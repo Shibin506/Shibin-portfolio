@@ -9,6 +9,8 @@ export interface Project {
   videoPoster?: string;
   /** Short line shown under the video, e.g. that it is narrated. */
   videoNote?: string;
+  /** Full narrated version, e.g. on YouTube. */
+  videoUrl?: string;
   /** Shown as a large card at the top of the Projects section. */
   featured?: boolean;
 } 

@@ -9,6 +9,8 @@ export interface Project {
   videoPoster?: string;
   /** Short line shown under the video, e.g. that it is narrated. */
   videoNote?: string;
+  /** Full narrated version, e.g. on YouTube. */
+  videoUrl?: string;
   /** Shown as a large card at the top of the Projects section. */
   featured?: boolean;
 }
@@ -106,6 +108,7 @@ export const projectsData: Project[] = [
     video: "/projects/minutes-demo.mp4",
     videoPoster: "/projects/minutes-demo-poster.jpg",
     videoNote: "Narrated demo, 1:45 · unmute for the voiceover",
+    videoUrl: "https://youtu.be/X2rIOmC_pgo",
     demo: ""
   },
   {
