@@ -62,7 +62,12 @@ function FeaturedCard({ project: p, wide }: { project: Project; wide: boolean })
     >
       {p.video && (
         <div className={`flex items-center border-b border-line bg-surface2/40 p-3 sm:p-4 ${wide ? 'lg:border-b-0 lg:border-r' : ''}`}>
-          <DemoVideo src={p.video} poster={p.videoPoster} label={`${name} demo video`} />
+          <div className="w-full">
+            <DemoVideo src={p.video} poster={p.videoPoster} label={`${name} demo video`} />
+            {p.videoNote && (
+              <p className="mt-2 text-center font-mono text-[0.7rem] text-muted">🔊 {p.videoNote}</p>
+            )}
+          </div>
         </div>
       )}
       <div className="flex flex-1 flex-col p-6 sm:p-7">

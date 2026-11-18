@@ -7,6 +7,8 @@ export interface Project {
   /** Path to a short demo video in /public, shown inline on the card. */
   video?: string;
   videoPoster?: string;
+  /** Short line shown under the video, e.g. that it is narrated. */
+  videoNote?: string;
   /** Shown as a large card at the top of the Projects section. */
   featured?: boolean;
 } 
