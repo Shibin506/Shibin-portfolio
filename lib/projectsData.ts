@@ -34,10 +34,10 @@ export const projectsData: Project[] = [
     title: "Spotter — Real-Time AI Form Coach",
     description: [
       "Built an AI form coach that runs entirely in the browser: MediaPipe pose tracking on the phone's GPU feeds a TypeScript analyzer that recognises 6 exercises from the first rep, checks every rep (depth, lockout, knees caving in, hips rising first) and speaks a fix as the rep ends; the video never leaves the device.",
-      "Measures bar speed in m/s from the camera alone, says when to stop once speed drops 20% (with a reps-left estimate) and estimates a 1-rep max from a load-velocity fit; makes a shareable highlight clip with a slow-motion freeze on the rep worth a second look, plus hands-free voice commands and an AI coach note from Gemini.",
+      "Measures bar speed in m/s from the camera alone, says when to stop once speed drops 20% (with a reps-left estimate) and estimates a 1-rep max from a load-velocity fit; makes a shareable highlight clip with a slow-motion freeze on the rep worth a second look, plus hands-free voice commands and an AI coach note from a Llama model on Groq (a serverless API that sends only the set's numbers, never video).",
       "Built a labelling page, an accuracy eval (rep recall and precision, per-flag F1) and a PyTorch → ONNX training pipeline for a learned form model, backed by 68 unit tests on synthetic skeletons and Playwright tests that run the real model in headless Chromium."
     ],
-    techStack: ["TypeScript", "React", "MediaPipe", "Computer Vision", "PyTorch", "ONNX", "Gemini API", "WebAssembly", "PWA", "Playwright", "Vercel"],
+    techStack: ["TypeScript", "React", "MediaPipe", "Computer Vision", "PyTorch", "ONNX", "Groq (Llama)", "Serverless", "WebAssembly", "PWA", "Playwright", "Vercel"],
     github: "https://github.com/Shibin506/Spotter",
     featured: true,
     demo: "https://spotter-gray.vercel.app",
