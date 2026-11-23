@@ -66,7 +66,7 @@ function FeaturedCard({ project: p, wide }: { project: Project; wide: boolean })
             <DemoVideo src={p.video} poster={p.videoPoster} label={`${name} demo video`} />
             {(p.videoNote || p.videoUrl) && (
               <p className="mt-2 text-center font-mono text-[0.7rem] text-muted">
-                {p.videoNote && <>🔊 {p.videoNote}</>}
+                {p.videoNote}
                 {p.videoNote && p.videoUrl && " · "}
                 {p.videoUrl && (
                   <a href={p.videoUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
@@ -87,12 +87,20 @@ function FeaturedCard({ project: p, wide }: { project: Project; wide: boolean })
             <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">{name}</h3>
             {subtitle && <p className="mt-1 text-sm text-muted">{subtitle}</p>}
           </div>
-          {p.github && (
-            <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}
-               className="rounded-lg p-2 text-xl text-muted transition hover:text-accent">
-              <FaGithub />
-            </a>
-          )}
+          <div className="flex shrink-0 items-center gap-1">
+            {p.demo && (
+              <a href={p.demo} target="_blank" rel="noopener noreferrer"
+                 className="rounded-full border border-accent/40 px-3 py-1 font-mono text-xs text-accent transition hover:bg-accent/10">
+                Try it live ↗
+              </a>
+            )}
+            {p.github && (
+              <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}
+                 className="rounded-lg p-2 text-xl text-muted transition hover:text-accent">
+                <FaGithub />
+              </a>
+            )}
+          </div>
         </div>
         <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
           {p.description.map((d) => (
