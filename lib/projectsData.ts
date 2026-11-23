@@ -33,11 +33,11 @@ export const projectsData: Project[] = [
   {
     title: "Spotter — Real-Time AI Form Coach",
     description: [
-      "Built a form coach that runs entirely in the browser: MediaPipe pose tracking on the phone's GPU (WebAssembly + WebGL) feeds a TypeScript analyzer that counts reps, checks squat depth, lockout and torso lean and push-up hip sag, and speaks a cue the moment each rep ends; the video never leaves the device.",
-      "Rep counting is a hysteresis state machine over One Euro–filtered joint angles, with per-rep tempo, bar path and centimetre estimates from the lifter's height; uploaded clips slow down to match the model's speed, so slower devices never skip a rep.",
-      "Covered by 18 unit tests on synthetic skeletons with known answers (noise, dropped frames, 15 FPS) and Playwright tests that run the real model in headless Chromium through both video upload and a fake camera; shipped as an installable PWA on Vercel."
+      "Built an AI form coach that runs entirely in the browser: MediaPipe pose tracking on the phone's GPU feeds a TypeScript analyzer that recognises 6 exercises from the first rep, checks every rep (depth, lockout, knees caving in, hips rising first) and speaks a fix as the rep ends; the video never leaves the device.",
+      "Measures bar speed in m/s from the camera alone, says when to stop once speed drops 20% (with a reps-left estimate) and estimates a 1-rep max from a load-velocity fit; makes a shareable highlight clip with a slow-motion freeze on the rep worth a second look, plus hands-free voice commands and an AI coach note from Gemini.",
+      "Built a labelling page, an accuracy eval (rep recall and precision, per-flag F1) and a PyTorch → ONNX training pipeline for a learned form model, backed by 68 unit tests on synthetic skeletons and Playwright tests that run the real model in headless Chromium."
     ],
-    techStack: ["TypeScript", "React", "MediaPipe", "Computer Vision", "WebAssembly", "WebGL", "Vite", "PWA", "Playwright", "Vitest", "Vercel"],
+    techStack: ["TypeScript", "React", "MediaPipe", "Computer Vision", "PyTorch", "ONNX", "Gemini API", "WebAssembly", "PWA", "Playwright", "Vercel"],
     github: "https://github.com/Shibin506/Spotter",
     featured: true,
     demo: "https://spotter-gray.vercel.app",
