@@ -31,6 +31,21 @@ export const projectsData: Project[] = [
     videoPoster: "/projects/mender-demo-poster.jpg"
   },
   {
+    title: "Spotter — Real-Time AI Form Coach",
+    description: [
+      "Built a form coach that runs entirely in the browser: MediaPipe pose tracking on the phone's GPU (WebAssembly + WebGL) feeds a TypeScript analyzer that counts reps, checks squat depth, lockout and torso lean and push-up hip sag, and speaks a cue the moment each rep ends; the video never leaves the device.",
+      "Rep counting is a hysteresis state machine over One Euro–filtered joint angles, with per-rep tempo, bar path and centimetre estimates from the lifter's height; uploaded clips slow down to match the model's speed, so slower devices never skip a rep.",
+      "Covered by 18 unit tests on synthetic skeletons with known answers (noise, dropped frames, 15 FPS) and Playwright tests that run the real model in headless Chromium through both video upload and a fake camera; shipped as an installable PWA on Vercel."
+    ],
+    techStack: ["TypeScript", "React", "MediaPipe", "Computer Vision", "WebAssembly", "WebGL", "Vite", "PWA", "Playwright", "Vitest", "Vercel"],
+    github: "https://github.com/Shibin506/Spotter",
+    featured: true,
+    demo: "https://spotter-gray.vercel.app",
+    video: "/projects/spotter-demo.mp4",
+    videoPoster: "/projects/spotter-demo-poster.jpg",
+    videoNote: "Sample run on a drawn test mannequin"
+  },
+  {
     title: "Autonomous AI Agent & Serverless Workflow Engine",
     description: [
       "Engineered an autonomous AI agent framework and serverless workflow engine in Go, Python, and Rust, utilizing custom RAG pipelines, LLMs, and Kafka to automate complex manual handoffs.",
@@ -107,7 +122,7 @@ export const projectsData: Project[] = [
     featured: true,
     video: "/projects/minutes-demo.mp4",
     videoPoster: "/projects/minutes-demo-poster.jpg",
-    videoNote: "Narrated demo, 1:45 · unmute for the voiceover",
+    videoNote: "🔊 Narrated demo, 1:45 · unmute for the voiceover",
     videoUrl: "https://youtu.be/X2rIOmC_pgo",
     demo: ""
   },
